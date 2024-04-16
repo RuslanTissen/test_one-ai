@@ -45,7 +45,7 @@
 
 			// SECTION -----------------------------------
 
-			section {
+			.section {
 				max-width: 308px;
 				max-height: 368px;
 				margin: 40px 34px 0;
@@ -59,11 +59,14 @@
 				-webkit-backdrop-filter: blur(20px);
 				display: flex;
 				flex-direction: column;
-				.section__cont{
+				text-decoration: none;
+				.section__cont {
 					max-width: 281px;
 					max-height: 335px;
 					img {
+						width: 100%;
 						border-radius: 20px;
+						display: block;
 					}
 					.lego {
 						text-align: left;
@@ -71,8 +74,12 @@
 						letter-spacing: 0px;
 						color: #fceff9;
 						opacity: 1;
+						margin: 0;
 					}
 				}
+			}
+			.section:last-of-type {
+				margin-bottom: 40px;
 			}
 
 			// FOOTER ------------------------------------
