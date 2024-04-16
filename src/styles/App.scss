@@ -1,0 +1,185 @@
+@import "../../node_modules/rfs/scss";
+
+.App {
+	min-height: 100vh;
+	min-height: 100svh;
+	main {
+		min-height: inherit;
+		width: 375px;
+		margin-inline: auto;
+		.starts {
+			min-height: inherit;
+			display: flex;
+			flex-direction: column;
+			background: transparent linear-gradient(180deg, #6600ff 0%, #00cc99 100%) 0% 0% no-repeat padding-box;
+
+			// HEADER -----------------------------------
+
+			.header {
+				height: 80px;
+				font-family: Montserrat;
+				background: #fceff9 0% 0% no-repeat padding-box;
+				padding-inline: 34px;
+				border-radius: 0px 0px 50px 50px;
+				line-height: 18px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				p {
+					font-weight: 900;
+					font-size: 34px;
+				}
+				button {
+					background: #fceff9 0% 0% no-repeat padding-box;
+					box-shadow: 0px 0px 10px #6600ff66;
+					border: 2px solid #6600ff;
+					border-radius: 50px;
+					opacity: 1;
+					text-align: center;
+					font: normal normal normal 19px/25px Basic;
+					letter-spacing: 0px;
+					color: #6600ff;
+					padding-inline: 20px;
+				}
+			}
+
+			// SECTION -----------------------------------
+
+			section {
+				max-width: 308px;
+				max-height: 368px;
+				margin: 40px 34px 0;
+				padding: 13.5px;
+				background: transparent linear-gradient(140deg, #fff7fc66 0%, #ffffff66 0%, #ffffff00 100%) 0% 0% no-repeat
+					padding-box;
+				box-shadow: inset 3px 3px 6px #eee5e9;
+				border-radius: 30px;
+				opacity: 1;
+				backdrop-filter: blur(20px);
+				-webkit-backdrop-filter: blur(20px);
+				display: flex;
+				flex-direction: column;
+				.section__cont{
+					max-width: 281px;
+					max-height: 335px;
+					img {
+						border-radius: 20px;
+					}
+					.lego {
+						text-align: left;
+						font: normal normal 900 35px/43px Montserrat;
+						letter-spacing: 0px;
+						color: #fceff9;
+						opacity: 1;
+					}
+				}
+			}
+
+			// FOOTER ------------------------------------
+
+			.footer {
+				height: 153px;
+				margin-top: auto;
+				background: #fceff9 0% 0% no-repeat padding-box;
+				opacity: 1;
+				padding-inline: 34px;
+				border-top-right-radius: 2.5rem;
+				border-top-left-radius: 2.5rem;
+				line-height: 18px;
+				letter-spacing: 0px;
+				.footer__first-p {
+					font-family: sans-serif;
+					font-size: 20px;
+					margin-top: 31px;
+				}
+				.footer__second-p {
+					font-size: 20px;
+					font-family: urbanist;
+					font-weight: 100;
+				}
+			}
+		}
+	}
+	// START ------------------------------
+}
+
+// .title__super__include {
+// 	@include font-size(6rem);
+// }
+// .title__picture--include {
+// 	@include font-size(5rem);
+// }
+// .title__include {
+// 	@include font-size(2.5rem);
+// 	font-family: "Tomorrow", sans-serif;
+// 	text-align: center;
+// 	font-weight: 300;
+// }
+// .title__midle__include {
+// 	@include font-size(2rem);
+// }
+// .text__include {
+// 	@include font-size(1.5rem);
+// }
+// //  ----------- TITLE -----------------------------------------------------
+// .title {
+// 	font-size: calc(1.525rem + 3.3vw);
+// }
+// @media (min-width: 1200px) {
+// 	.title {
+// 		font-size: 4rem;
+// 	}
+// }
+// // ------------------TITLE END --------------------------------------------
+// // ------------------------- MIXIN FONT SISE ------------------------------
+
+// $remBase: 16; //set base font size. unitless value in pixels.
+// $widthMin: 480; //set small breakpoint. unitless value in pixels.
+// $widthMax: 1024; //set large breakpoint. unitless value in pixels.
+
+// @mixin font-size($valueMin, $valueMax) {
+// 	$fontMin: $valueMin * $remBase;
+// 	$fontMax: $valueMax * $remBase;
+
+// 	font-size: $valueMin * 1rem;
+
+// 	@media (min-width: #{$widthMin}px) {
+// 		font-size: calc(
+// 			#{$fontMin}px + (#{$fontMax} - #{$fontMin}) * ((100vw - #{$widthMin}px) / (#{$widthMax} - #{$widthMin}))
+// 		);
+// 	}
+
+// 	@media (min-width: #{$widthMax}px) {
+// 		font-size: $valueMax * 1rem;
+// 	}
+// }
+
+// .h2_mixin {
+// 	@include font-size(1.125, 1.875);
+// }
+
+// .h3__mixin--bold {
+// 	@include font-size(1.125, 1.5);
+// 	font-weight: 600;
+// 	font-family: "Tomorrow", sans-serif;
+// }
+
+// .h3__mixin--bold--with-padding {
+// 	@include font-size(1.125, 1.5);
+// 	padding-top: 3rem;
+// 	padding-bottom: 1rem;
+// 	padding-inline: 1rem;
+// 	font-weight: 600;
+// 	font-family: "Tomorrow", sans-serif;
+// }
+// .regular-text__mixin {
+// 	@include font-size(1, 1.25);
+// 	font-weight: 300;
+// 	font-family: "Tomorrow", sans-serif;
+// }
+// .regular-text__mixin--with-padding {
+// 	@include font-size(1, 1.25);
+// 	@include padding(0.5rem);
+// 	font-weight: 300;
+// 	font-family: "Tomorrow", sans-serif;
+// }
