@@ -12,6 +12,7 @@
 			display: flex;
 			flex-direction: column;
 			background: transparent linear-gradient(180deg, #6600ff 0%, #00cc99 100%) 0% 0% no-repeat padding-box;
+			position: relative;
 
 			// HEADER -----------------------------------
 
@@ -68,13 +69,13 @@
 						border-radius: 20px;
 						display: block;
 					}
-					.lego {
+					.lego__text {
 						text-align: left;
 						font: normal normal 900 35px/43px Montserrat;
 						letter-spacing: 0px;
 						color: #fceff9;
 						opacity: 1;
-						margin: 0;
+						margin: 11px 0;
 					}
 				}
 			}
@@ -103,7 +104,210 @@
 					font-size: 20px;
 					font-family: urbanist;
 					font-weight: 100;
+					line-height: 24px;
 				}
+			}
+
+			// Blur ----------------------------------
+
+			.blur {
+				position: absolute;
+				top: 0;
+				width: 375px;
+				min-height: 812px;
+				backdrop-filter: blur(50px);
+				-webkit-backdrop-filter: blur(50px);
+				padding: 22px 62px;
+				display: flex;
+				animation: apear .5s forwards;
+				// animation: disapear .5s forwards;
+				opacity: 0;
+			
+				.blur__button {
+					width: 36px;
+					height: 36px;
+					background-color: rgba(0, 0, 0, 0);
+					position: absolute;
+					right: 62px;
+					border: none;
+					color: red;
+					padding: 0;
+					display: flex;
+				}
+				.blur__cont {
+					justify-self: center;
+					align-self: center;
+					width: inherit;
+					height: 225px;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					.email,
+					.password {
+						width: 100%;
+						height: 55px;
+						background: #fceff9 0% 0% no-repeat padding-box;
+						box-shadow: 0px 0px 20px #08070880;
+						border: 2px solid #080708;
+						border-radius: 30px;
+						display: flex;
+						justify-content: left;
+						align-items: center;
+						padding-left: 20px;
+						font: normal normal normal 25px/33px Test Söhne;
+						letter-spacing: 0px;
+						color: #080708;
+						opacity: 50%;
+					}
+					.blur__sign {
+						width: 169px;
+						height: 55px;
+						background: #00cc99 0% 0% no-repeat padding-box;
+						box-shadow: 0px 0px 20px #08070880;
+						border-radius: 30px;
+						text-decoration: none;
+						margin-inline: auto;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						font: normal normal normal 25px/33px Sans;
+						letter-spacing: 0px;
+						color: #fff7fc;
+						font-weight: 600;
+					}
+				}
+			}
+			@keyframes apear {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@keyframes disapear {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+		}
+
+		// ABO --------------------------------------
+
+		.abo {
+			min-height: 815px;
+			background: transparent linear-gradient(45deg, #493ae2 0%, #01ca9a 100%) 0% 0% no-repeat padding-box;
+			padding: 30px;
+			display: flex;
+			flex-direction: column;
+			.abo__button {
+				text-decoration: none;
+				width: fit-content;
+				min-width: 184px;
+				height: 55px;
+				margin-top: 52px;
+				background: #fceff9 0% 0% no-repeat padding-box;
+				box-shadow: 0px 0px 20px #08070880;
+				border-radius: 30px;
+				display: flex;
+				justify-content: left;
+				align-items: center;
+				// svg {
+				// 	width: 18px;
+				// 	height: 30px;
+				// }
+				span {
+					font: normal normal normal 25px/353px Sans;
+					font-weight: 800;
+					letter-spacing: 0px;
+					color: #080708;
+					margin-left: -10px;
+				}
+			}
+			.abo--foto {
+				background: #eee5e900 0% 0% no-repeat padding-box;
+				box-shadow: inset 3px 3px 6px #eee5e9;
+				border: 3px solid #eee5e9;
+				border-radius: 20px;
+				display: block;
+				margin: 50px 0 40px;
+			}
+			.cont__images-adder {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 22px;
+				.cont__images-adder--box {
+					text-decoration: none;
+					flex: 1 1 40%;
+					background: transparent linear-gradient(135deg, #fff7fc66 0%, #ffffff66 0%, #ffffff00 100%) 0% 0%
+						no-repeat padding-box;
+					box-shadow: inset 3px 3px 6px #eee5e9;
+					border-radius: 20px;
+					opacity: 1;
+					backdrop-filter: blur(20px);
+					-webkit-backdrop-filter: blur(20px);
+					padding: 16.09px 9.5px 0;
+					text-align: center;
+					text-wrap: balance;
+					p {
+						margin: 10.9px 0;
+						text-align: center;
+						font: normal normal normal 15px/20px Sans;
+						letter-spacing: 0px;
+						color: #fceff9;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+		// LEGO -------------------------------------
+		.lego {
+			min-height: 815px;
+			background: transparent linear-gradient(45deg, #493ae2 0%, #01ca9a 100%) 0% 0% no-repeat padding-box;
+			padding: 30px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			.lego__img {
+				width: 244px;
+				height: 529px;
+				background: transparent url("../../src/images/lego.png") 0% 0% no-repeat padding-box;
+				box-shadow: 0px 0px 10px #5fbb9780;
+				border-radius: 50px;
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+			.lego__save {
+				width: 244px;
+				height: 65px;
+				/* UI Properties */
+				background: #00cc99 0% 0% no-repeat padding-box;
+				box-shadow: 0px 0px 20px #080f0fbf;
+				border-radius: 50px;
+				text-align: center;
+				font: normal normal normal 27px/36px Sans;
+				letter-spacing: 0px;
+				color: #fff7fc;
+				font-weight: 600;
+			}
+			.lego__pics {
+				width: 190px;
+				height: 65px;
+				background: #fceff9 0% 0% no-repeat padding-box;
+				box-shadow: 0px 0px 20px #080f0f80;
+				border-radius: 50px;
+				font: normal normal normal 27px/36px Sans;
+				letter-spacing: 0px;
+				color: #080708;
+				text-decoration: none;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 			}
 		}
 	}
